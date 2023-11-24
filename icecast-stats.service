@@ -1,0 +1,12 @@
+[Unit]
+Description=icecast stats thunk for prometheus
+Requires=icecast.service
+
+[Service]
+Type=simple
+User=erin
+Group=erin
+ExecStart=/usr/bin/python3 /home/erin/stats.py
+
+[Install]
+WantedBy=multi-user.target
